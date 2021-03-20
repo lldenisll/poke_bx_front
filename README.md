@@ -3,14 +3,12 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">Abrir Front-end</a>
+    <a href="https://github.com/github_username/repo_name" targe="blank">Abrir Front-end</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Abrir Back-end</a>
+    <a href="https://github.com/github_username/repo_name/issues" targe="blank">Abrir Back-end</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Repositório Back-End</a>
+    <a href="https://github.com/github_username/repo_name/issues" targe="blank">Repositório Back-End</a>
   </p>
 </p>
 
@@ -23,22 +21,14 @@
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Tecnologias</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#metodologia-utilizada">Metodologia Utilizada</a></li>
+    <li><a href="#meu-contato">Contato</a></li>
   </ol>
 </details>
 
@@ -46,13 +36,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
+Projeto consiste em uma calculadora de trades de pokemon, para que o usuário possa calcular se
+uma troca é "justa" ou não. Uma troca consiste em dois jogadores ofertarem entre 1 e 6 pokemons de cada lado. Qualquer
+combinação é válida. Por exemplo, trocar 2 pokemons iguais por 4 pokemons distintos. A metodologia utilizada para avaliação dos pokemons está descrita abaixo
+O projeto foi desenvolvido com Python e Django no backend com banco de dados postgresql, o deploy foi feito no heroku. 
+O front end utiliza html css e js com VueJS para renderizar o histórico de trocas.
 
 ### Tecnologias
 
