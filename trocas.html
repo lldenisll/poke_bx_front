@@ -31,6 +31,13 @@
         </a>
     </nav>
         <div class = "container "id="app">
+        <div class="row">
+        <div class = "container player pt-4">
+        <img src="https://www.pokecommunity.com/customavatars/avatar117801_6.gif" >
+        <img src="https://cdn.bulbagarden.net/upload/thumb/d/d6/Pokémon_Center_ORAS_model.png/250px-Pokémon_Center_ORAS_model.png" >
+        </div>
+        </div>
+
         <div class = "row" v-for="pokemons in APIdata"  :key="pokemons.id">
         <ul class="col-5 user">
         Pokemons cedidos pelo jogador na seção: {{pokemons.id}}
@@ -43,6 +50,7 @@
         <div class = "imgcenter col-2">
             <img class = "pt-3" src="https://styles.redditmedia.com/t5_2rmov/styles/communityIcon_8jj0o28zosp21.png?width=256&s=8a23b0dcec4abbaa98df5c1f9270b08da7f960e3" width="60%" >
         </div>
+        
         <ul class="col-5 troca">
         Pokemons obtidos pelo jogador na seção: {{pokemons.id}}
         <span v-for = "(n, i) in 5" >

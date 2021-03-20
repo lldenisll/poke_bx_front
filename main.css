@@ -3,6 +3,10 @@ body{
     font-family: 'Press Start 2P', cursive;
     
 }
+.player{
+    display:flex;
+    justify-content:space-between;
+}
 .metodologia{
     font-family: 'Crimson Pro', serif;
 }
