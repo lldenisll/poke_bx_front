@@ -96,7 +96,7 @@ Caso queira uma cópia dessa aplicação, siga os seguintes passos:
    seja feliz :)
    ```
 ### Integração com banco de dados
-Caso deseje rodar o projeto em um banco de dados próprio
+Caso deseje rodar o projeto em um banco de dados próprio, configure o database no arquivo settings.py na pasta config
 
 
 ## Metodologia utilizada
