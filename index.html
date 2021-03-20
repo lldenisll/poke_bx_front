@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+    <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">
+    <img src="https://seeklogo.com/images/P/pokeball-logo-DC23868CA1-seeklogo.com.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    BxBlue Pokemon Trader
+  </a>
+  <a class="navbar-brand" href="metodologia.html">
+      <img src="https://img1.pnghut.com/17/14/1/aMpfiyaFU2/electric-blue-emblem-learning-royaltyfree-mathematical-optimization.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+
+    Analise de dados e metodologia
+  </a>
+    <a class="navbar-brand" href="trocas.html">
+      <img src="https://image.flaticon.com/icons/png/512/188/188940.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Histórico de trocas
+  </a>
+  
+</nav>
+
+    <div class = "container text-center pt-4">
+     <div class="row">
+        <div class="imgcenter pb-3" ><img class = "logo "src="https://i.pinimg.com/originals/ef/e4/f0/efe4f058ac4985936baf4b3d5027587d.png"></div>
+    </div>
+        <label class="pb-3">Selecione um pokemon e ele será copiado automaticamente *** <br>Funciona no Google Chorme e Brave<br> Aos navegadores não suportados, perdoe-nos, estamos trabalhando nisso!</label>
+        <select class="form-control pb-3"  id="procurapokemon" ></select>
+    </div>
+<div class="container">
+<div class="row  pt-3">  
+    <div class="col-6">
+        <form class="form-control user" id="formuser">
+           <label for="">Pokemons Jogador</label>
+           <input type="text" class="form-control " id="pokeuser1"  placeholder="Pokemon 1">
+           <input type="text" class="form-control " id="pokeuser2"  placeholder="Pokemon 2">
+           <input type="text" class="form-control" id="pokeuser3"  placeholder="Pokemon 3">
+           <input type="text" class="form-control" id="pokeuser4"  placeholder="Pokemon 4">
+           <input type="text" class="form-control" id="pokeuser5"  placeholder="Pokemon 5">
+           <input type="text" class="form-control" id="pokeuser6"  placeholder="Pokemon 6">
+    </div>
+       </form>
+         <div class=" col-6">
+         <form class="form-control troca" id="formtroca">
+         <label for="">Pokemons para troca</label>
+           <input type="text" class="form-control " id="poketroca1"  placeholder="Pokemon 1">
+           <input type="text"class="form-control " id="poketroca2"  placeholder="Pokemon 2">
+           <input type="text"class="form-control" id="poketroca3"  placeholder="Pokemon 3">
+           <input type="text" class="form-control" id="poketroca4"  placeholder="Pokemon 4">
+           <input type="text" class="form-control" id="poketroca5"  placeholder="Pokemon 5">
+           <input type="text"class="form-control" id="poketroca6"  placeholder="Pokemon 6">
+        </div>
+      </form>
+  </div>
+</div>
+
+<div class = "container">
+    <button type="button" onclick = "avaliaTroca()" id = "salva" class="btn btn-outline-primary"> Salvar Troca</button>
+    <button type="button" onclick = "veredito()" id="checa" class="btn btn-outline-primary"> Avaliar Troca</button>
+    <button type="button" onclick="trocar()" id = "troca" class="btn btn-outline-primary" > Trocar </button>
+    <button type="button" onclick="zerar()" id = "dozero" class="btn btn-outline-primary" > Zerar </button>
+
+</div>
+
+<div class=" veredito pt-3 ">
+    <p id = "veredito"> </p>
+</div>
+
+<footer>
+    <div class="container text-center">
+        Dênis Gonçalves dos Santos | Desafio poke trader - BxBlue <br> 
+        Email: denis.ga.each@gmail.com | 
+        tel: <a href="https://api.whatsapp.com/send?phone=5511965191993&text=Acabei%20de%20ver%20o%20seu%20desafio%2C%20vamos%20conversar%3F" target="_blank"> (11) 96519-1993</a>
+    </div>
+</footer>
+
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       <script src="./index.js"></script>
+       
+    </body>
+
+
+</html>

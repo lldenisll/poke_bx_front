@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css" rel="stylesheet">
+    </head>
+    <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://seeklogo.com/images/P/pokeball-logo-DC23868CA1-seeklogo.com.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            BxBlue Pokemon Trader
+        </a>
+        <a class="navbar-brand" href="metodologia.html">
+            <img src="https://img1.pnghut.com/17/14/1/aMpfiyaFU2/electric-blue-emblem-learning-royaltyfree-mathematical-optimization.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+
+            Analise de dados e metodologia
+        </a>
+            <a class="navbar-brand" href="historico.html">
+            <img src="https://image.flaticon.com/icons/png/512/188/188940.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Histórico de trocas
+        </a>
+    </nav>
+        <div class = "container "id="app">
+        <div class = "row" v-for="pokemons in APIdata"  :key="pokemons.id">
+        <ul class="col-5 user">
+        Pokemons cedidos pelo jogador na seção: {{pokemons.id}}
+        <span v-for = "(n, i) in 5" >
+        <span v-if = "pokemons.pokemon_user[i]">
+            <li> {{pokemons.pokemon_user[i]}} -- Base Exp: {{pokemons.pokemon_base_user[i]}}<img :src="pokemons.pokemon_img_user[i]" width = "50px"alt=""> </li>
+        </ul>
+        </span>
+        </span>
+        <div class = "imgcenter col-2">
+            <img class = "pt-3" src="https://styles.redditmedia.com/t5_2rmov/styles/communityIcon_8jj0o28zosp21.png?width=256&s=8a23b0dcec4abbaa98df5c1f9270b08da7f960e3" width="60%" >
+        </div>
+        <ul class="col-5 troca">
+        Pokemons obtidos pelo jogador na seção: {{pokemons.id}}
+        <span v-for = "(n, i) in 5" >
+        <span v-if = "pokemons.pokemon_troca[i]">
+            <li> {{pokemons.pokemon_troca[i]}} -- Base Exp: {{pokemons.pokemon_base_troca[i]}} <img :src="pokemons.pokemon_img_troca[i]" width = "50px"alt="">  </li>
+        </ul>
+        </span>
+        </span>
+    </div>
+</div>
+<footer>
+    <div class="container text-center">
+        Dênis Gonçalves dos Santos | Desafio poke trader - BxBlue <br> 
+        Email: denis.ga.each@gmail.com | 
+        tel: <a href="https://api.whatsapp.com/send?phone=5511965191993&text=Acabei%20de%20ver%20o%20seu%20desafio%2C%20vamos%20conversar%3F" target="_blank"> (11) 96519-1993</a>
+    </div>
+</footer>
+<script>
+var app = new Vue({ 
+    el: '#app',
+    name: "get-request",
+  data() {
+    return {
+      APIdata: '',
+    };
+  },
+  mounted () {
+    axios
+      .get('https://calm-inlet-80092.herokuapp.com/core/pokemon-troca/')
+      .then(response => (this.APIdata = response.data))
+  },
+
+});
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap" rel="stylesheet">   
+         <body>
+    <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">
+    <img src="https://seeklogo.com/images/P/pokeball-logo-DC23868CA1-seeklogo.com.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Bx Pokemon Trader
+  </a>
+  <a class="navbar-brand" href="metodologia.html">
+      <img src="https://img1.pnghut.com/17/14/1/aMpfiyaFU2/electric-blue-emblem-learning-royaltyfree-mathematical-optimization.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+
+    Analise de dados e metodologia
+  </a>
+    <a class="navbar-brand" href="trocas.html">
+      <img src="https://image.flaticon.com/icons/png/512/188/188940.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Histórico de trocas
+  </a>
+  
+</nav>
+<div class="container metodologia">
+<h1> Metodologia para critério de avaliação da troca </h1>
+<p> O critério foi adotado após uma analise de dados em um jupyter nootbook <br> 
+Para essa analise, afim de não consumir muito a API que é gratuita, a pedido deles (fair use) foi utilizado um dataset do kaggle</p><br>
+<h4>Klusters:</h4>
+Foi utilizado 20 klusters, com base na analise da curva que segue:<br>
+<img src="elbow.png" width="800px"><br>
+Olhando para os klusters de dados, ficou nítido que o Kluster 3 é o mais poderoso, sendo os parâmetros mais interessantes: is_legendary, base_exp, e sp_atack. Conforme imagem abaixo:<br>
+<img src="klusters.png" width="800px"> <br>
+<h4>Entrevista:</h4>
+<br> <p>Para confirmar a analise, foi consultado um mestre pokemón (meu priminho rs) que explicou que alguns pokemons utilizam o special atack enquanto outros o atack, por exemplo o charmander utiliza mais ataques que utilizam o special_atack (flamepower) enquanto o machop se utiliza mais do atack (punch)</p><br>
+<h4>Conclusão:</h4>
+<p>Com isso, foi utilizado para a avaliação: (base_exp*2 + atack + special atack * 5 se is_legendary ou is_mythic) <p>
+Por fim, seguem alguns pokemons categorizados no kluster 3, e sua distancia com outro pokemon proxímo. De modo geral podemos dizer que quanto mais proximo de um pokemon no Kluster 3, mais poderoso será o pokemon
+<img src="kluster3.png"width="800px">
+<h4>Próximos passos:</h4>
+No limite, para os próximo passos, podemos avaliar os vizinhos mais próximos para avaliar se uma troca é justa, ou não.
+</div>
+<footer>
+    <div class="container text-center">
+        Dênis Gonçalves dos Santos | Desafio poke trader - BxBlue <br> 
+        Email: denis.ga.each@gmail.com | 
+        tel: <a href="https://api.whatsapp.com/send?phone=5511965191993&text=Acabei%20de%20ver%20o%20seu%20desafio%2C%20vamos%20conversar%3F" target="_blank"> (11) 96519-1993</a>
+    </div>
+</footer>
+
+       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       <script src="./index.js"></script>
+       
+    </body>
+
+
+</html>
