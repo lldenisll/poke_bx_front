@@ -6,11 +6,11 @@
     De modo que a calcura define se é justa ou não, assim você só precisa decidir se quer os pokemons do outro lado. 
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name" targe="blank">Abrir Front-end</a>
+    <a href="https://lldenisll.github.io/poke_bx_front/index.html" targe="blank">Abrir Front-end</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues" targe="blank">Abrir Back-end</a>
+    <a href="https://calm-inlet-80092.herokuapp.com/core/" targe="blank">Abrir API Heroku</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues" targe="blank">Repositório Back-End</a>
+    <a href="https://github.com/lldenisll/poke_trader_bx" targe="blank">Repositório Back-End</a>
   </p>
 </p>
 
@@ -110,7 +110,7 @@ A fim de confirmar a informação, um mestre pokemon foi consultado, e elucidou 
 Com isso a pontuação atribuida a cada pokemon seguiu considerou a experiência base do pokemon com peso 2 + o ataque + o ataque especial, o total é multiplicado por 10 caso o pokemon seja lendário ou mítico `((base_exp*2) + ataque + ataque_especial)*10(se lendário)`
 
 
-_Para saber mais consulte a [Documentação](https://example.com)_
+_Para saber mais consulte a [Documentação](https://lldenisll.github.io/poke_bx_front/metodologia.html)_
 
 
 ## Meu contato
