@@ -1,7 +1,9 @@
 <h3 align="center">Poke Trader</h3>
 
   <p align="center">
-    project_description
+    Tá afim de trocar uns pokemons, mas não tem certeza se está fazendo a escolha certa? Acesse agora a calculadora de trocas de pokemon :) 
+    A nossa calculadora preza por uma troca justa, que não privilegie lado algum.
+    De modo que a calcura define se é justa ou não, assim você só precisa decidir se quer os pokemons do outro lado. 
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name" targe="blank">Abrir Front-end</a>
@@ -19,7 +21,7 @@
   <summary><h2 style="display: inline-block">Sobre o projeto</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
       <ul>
         <li><a href="#tecnologias">Tecnologias</a></li>
       </ul>
@@ -35,7 +37,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre o projeto
 Projeto consiste em uma calculadora de trades de pokemon, para que o usuário possa calcular se
 uma troca é "justa" ou não. Uma troca consiste em dois jogadores ofertarem entre 1 e 6 pokemons de cada lado. Qualquer
 combinação é válida. Por exemplo, trocar 2 pokemons iguais por 4 pokemons distintos. A metodologia utilizada para avaliação dos pokemons está descrita abaixo
