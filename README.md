@@ -5,6 +5,7 @@
     A nossa calculadora preza por uma troca justa, que não privilegie lado algum.
     De modo que a calcura define se é justa ou não, assim você só precisa decidir se quer os pokemons do outro lado. 
     <br />
+     <a href="https://github.com/lldenisll/poke_trader_bx" targe="blank">If you only understand english, please check the back end repository</a>
     <br />
     <a href="https://lldenisll.github.io/poke_bx_front/index.html" targe="blank">Abrir Front-end</a>
     ·
