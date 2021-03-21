@@ -29,66 +29,66 @@
   
 </nav>
 <div class="container metodologia">
-<h1> Metodologia para critério de avaliação da troca </h1>
- O critério foi adotado após uma analise de dados em um jupyter nootbook <br> 
-Para essa analise, afim de não consumir muito a API que é gratuita, a pedido deles (fair use) foi utilizado um dataset do kaggle<br>
-<h4>Clusters:</h4>
-Foi utilizado 20 clusters, com base na analise da curva que segue:<br>
-<img src="elbow.png" width="800px"><br>
-Olhando para os clusters de dados, ficou nítido que o Cluster 3 é o mais poderoso, e o cluster 10 o menos poderoso, sendo os parâmetros mais interessantes: is_legendary, base_exp, e sp_atack. Conforme imagem abaixo:<br>
-<img src="klusters.png" width="800px"> <br>
-<h4>Entrevista:</h4>
-A fim de confirmar a informação, um mestre pokemon foi consultado, e elucidou que alguns pokemons utilizam o ataque especial (special atack), enquanto outros utilizam apenas o ataque normal (atack). Por exemplo o Charmander tem maior pontuação em special atack pois usa ataques como lança chamas, enquanto o machop, usa o ataque comum, como em investida por exemplo.<h4>Conclusão:</h4>
-Com isso, foi utilizado para a avaliação: (base_exp*2 + atack + special atack * 5 se is_legendary ou is_mythic) 
-Seguem alguns pokemons categorizados no cluster 3, e sua distancia com outro pokemon proxímo. De modo geral podemos dizer que quanto mais proximo de um pokemon no Cluster 3, mais poderoso será o pokemon
-De forma oposta, os pokemons categorizados no cluster 10 são os considerados mais fracos pelo algoritmo
-<div class="container pt-4">
-<div class = "col-6" style="float:left">
-cluster 3
-<img src="kluster3.png"width="400px">
-</div>
-<div class = "col-6" style="float:right">
-Cluster 10
-<img src="kluster10.png"width="400px">
-</div>
-</div>
-
 <div class="row">
-  
-<h4>Testes de troca justa</h4>
-No limite, podemos avaliar os vizinhos mais próximos para avaliar se uma troca é justa, ou não. Além disso, podemos fazer testes considerando os clusters opostos, por exemplo nenhuma troca envolvendo o cluster 3 VS cluster 10 pode ser considerada justa <br>
-Com isso o arquivo de testes, test.py, considerou os pokemons do cluster 10 e cluster 3, sendo testado para trocas justas:
-<li>2 listas de pokemons do cluster 3</li>
-<li>2 listas de pokemons do cluster 10</li>
-<h4>Testes de troca injusta</h4>
-No limite, podemos avaliar os vizinhos mais próximos para avaliar se uma troca é justa, ou não. Além disso, podemos fazer testes considerando os clusters opostos, por exemplo nenhuma troca envolvendo o cluster 3 VS cluster 10 pode ser considerada justa <br>
-Com isso o arquivo de testes, test.py, considerou os pokemons do cluster 10 e cluster 3, sendo testado para trocas injustas:
-<li>1 lista de pokemons do cluster 3 Vs 1 lista de pokemons do cluster 10</li>
-<li>1 lista de pokemons do cluster 3 Vs 1 lista de pokemons do cluster 10</li>
-<img src="clusters.png">
-Rodandos os testes nessas listas para assertfalse e assert true
-<img src="ok.png">
-</div>
+  <h1> Metodologia para critério de avaliação da troca </h1>
+  O critério foi adotado após uma analise de dados em um jupyter nootbook <br> 
+  Para essa analise, afim de não consumir muito a API que é gratuita, a pedido deles (fair use) foi utilizado um dataset do kaggle<br>
+  <h4>Clusters:</h4>
+  Foi utilizado 20 clusters, com base na analise da curva que segue:<br>
+  <img src="elbow.png" height="400px"><br>
+  Olhando para os clusters de dados, ficou nítido que o Cluster 3 é o mais poderoso, e o cluster 10 o menos poderoso, sendo os parâmetros mais interessantes: is_legendary, base_exp, e sp_atack. Conforme imagem abaixo:<br>
+  <img src="klusters.png" height="500px"> <br>
+  <h4>Entrevista:</h4>
+  A fim de confirmar a informação, um mestre pokemon foi consultado, e elucidou que alguns pokemons utilizam o ataque especial (special atack), enquanto outros utilizam apenas o ataque normal (atack). Por exemplo o Charmander tem maior pontuação em special atack pois usa ataques como lança chamas, enquanto o machop, usa o ataque comum, como em investida por exemplo.<h4>Conclusão:</h4>
+  Com isso, foi utilizado para a avaliação: (base_exp*2 + atack + special atack * 5 se is_legendary ou is_mythic) 
+  Seguem alguns pokemons categorizados no cluster 3, e sua distancia com outro pokemon proxímo. De modo geral podemos dizer que quanto mais proximo de um pokemon no Cluster 3, mais poderoso será o pokemon
+  De forma oposta, os pokemons categorizados no cluster 10 são os considerados mais fracos pelo algoritmo
+  </div>
 <div class="row">
-  <h4> Proximidade </h4>
-  Fazendo uma pesquisa no google para imagens de pokemons categorizados pelo nosso cluster como próximo, temos:
-  <div class="container pt-4">
-<div class = "col-6" style="float:left">
-cluster 3
-<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/250.png"width="200px">
-<img src="https://i.pinimg.com/originals/09/52/d8/0952d801dfe2365b37bf4ec3f38e8c1d.png"width="200px">
+  <div class = "col-6" style="float:left">
+    cluster 3
+    <img src="kluster3.png"width="400px">
+  </div>
+  <div class = "col-6" style="float:right">
+    Cluster 10
+    <img src="kluster10.png"width="400px">
+  </div>
+</div>
+  <div class="row pt-4">
+    <h4>Testes de troca justa</h4>
+    No limite, podemos avaliar os vizinhos mais próximos para avaliar se uma troca é justa, ou não. Além disso, podemos fazer testes considerando os clusters opostos, por exemplo nenhuma troca envolvendo o cluster 3 VS cluster 10 pode ser considerada justa <br>
+    Com isso o arquivo de testes, test.py, considerou os pokemons do cluster 10 e cluster 3, sendo testado para trocas justas:
+    <li>2 listas de pokemons do cluster 3</li>
+    <li>2 listas de pokemons do cluster 10</li>
+    <h4>Testes de troca injusta</h4>
+    No limite, podemos avaliar os vizinhos mais próximos para avaliar se uma troca é justa, ou não. Além disso, podemos fazer testes considerando os clusters opostos, por exemplo nenhuma troca envolvendo o cluster 3 VS cluster 10 pode ser considerada justa <br>
+    Com isso o arquivo de testes, test.py, considerou os pokemons do cluster 10 e cluster 3, sendo testado para trocas injustas:
+    <li>1 lista de pokemons do cluster 3 Vs 1 lista de pokemons do cluster 10</li>
+    <li>1 lista de pokemons do cluster 3 Vs 1 lista de pokemons do cluster 10</li>
+    <img src="clusters.png">
+    Rodandos os testes nessas listas para assertfalse e assert true
+    <img src="ok.png">
+  </div>
+  <div class="row">
+    <h4 class="pt-4"> Proximidade </h4>
+  Fazendo uma pesquisa no google para imagens de pokemons categorizados pelo nosso cluster como próximo, podemos ver que são até parecidos fisicamente:<br>
+  Aqui temos Ho-Oh com Moltres no cluster 3, e unfezant com staraptor no cluster 10
+  <div class = "col-6" style="float:left">
+  cluster 3
+    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/250.png"width="200px"> 
+    <img src="https://i.pinimg.com/originals/09/52/d8/0952d801dfe2365b37bf4ec3f38e8c1d.png"width="200px">
 
+  </div>
+  <div class = "col-6" style="float:right">
+    Cluster 10
+    <img src="https://cdn.bulbagarden.net/upload/5/5e/398Staraptor.png"width="200px">
+    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/521.png"width="200px">
+  </div>
 </div>
-<div class = "col-6" style="float:right">
-Cluster 10
-<img src="https://cdn.bulbagarden.net/upload/5/5e/398Staraptor.png"width="200px">
-<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/521.png"width="200px">
+</div>
 
-</div>
-Parece que o cluster dividiu bem nossos pokemons :) 
-</div>
-</div>
-</div>
+
+
 
 <footer>
     <div class="container text-center pb-3">
