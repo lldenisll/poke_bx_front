@@ -31,6 +31,8 @@
       <a href="#getting-started">Getting Started</a>
     </li>
     <li><a href="#metodologia-utilizada">Metodologia Utilizada</a></li>
+    <li><a href="#testes">Testes</a></li>
+
     <li><a href="#meu-contato">Contato</a></li>
   </ol>
 </details>
@@ -104,7 +106,7 @@ Caso deseje rodar o projeto em um banco de dados próprio, configure o database 
 O critério foi adotado após uma analise de dados em um jupyter nootbook
 Para essa analise, afim de não consumir muito a API que é gratuita, a pedido deles (fair use) foi utilizado um dataset do kaggle.
 
-Através desse dataset foram criados 20 Klusters, e observou-se que o kluser 3 incluia os pokemons mais poderosos, e que as features mais importantes são: is_legendary e special_atack
+Através desse dataset foram criados 20 Clusters, e observou-se que o kluser 3 incluia os pokemons mais poderosos, e que as features mais importantes são: is_legendary e special_atack
 
 A fim de confirmar a informação, um mestre pokemon foi consultado, e elucidou que alguns pokemons utilizam o ataque especial (special atack), enquanto outros utilizam apenas o ataque normal (atack). Por exemplo o Charmander tem maior pontuação em special atack pois usa ataques como lança chamas, enquanto o machop, usa o ataque comum, como em investida por exemplo.
 
@@ -113,6 +115,15 @@ Com isso a pontuação atribuida a cada pokemon seguiu considerou a experiência
 
 _Para saber mais consulte a [Documentação](https://lldenisll.github.io/poke_bx_front/metodologia.html)_
 
+## Testes
+
+No limite, podemos avaliar os vizinhos mais próximos para avaliar se uma troca é justa, ou não. Além disso, podemos fazer testes considerando os clusters opostos, por exemplo nenhuma troca envolvendo o cluster 3 VS cluster 10 pode ser considerada justa
+Com isso o arquivo de testes, test.py, considerou os pokemons do cluster 10 e cluster 3, sendo testado para trocas justas:
+2 listas de pokemons do cluster 3
+2 listas de pokemons do cluster 10
+e para trocas injustas:
+1 lista de pokemons do cluster 3 Vs 1 lista de pokemons do cluster 10
+1 lista de pokemons do cluster 3 Vs 1 lista de pokemons do cluster 10
 
 ## Meu contato
 
