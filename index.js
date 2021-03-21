@@ -12,11 +12,10 @@ function veredito(){
 			document.getElementById("veredito").innerHTML = "Essa troca não é justa"
 			window.alert('atenção essa troca não é justa')
 			document.getElementById("dozero").style.visibility = "visible"
-
 		}
     })
     .catch(err => {
-        console.error('An error ocurred', err);
+        console.error('Algo não deu certo', err);
     });
 	document.getElementById("checa").style.visibility = "hidden"
 	document.getElementById("troca").style.visibility = "visible"
@@ -48,7 +47,6 @@ $.ajax({
 }).done(function(){
 	document.getElementById("salva").style.visibility = "hidden"
 	document.getElementById("checa").style.visibility = "visible"
-	document.getElementById("pokeloader").style.visibility = "visible"	
 }).fail(function(){
 	alert('ops, parece que algum pokemon não é válido, use o campo de busca, e tente de novo')
 	location.reload();
@@ -79,8 +77,13 @@ function trocar(){
         url: "https://calm-inlet-80092.herokuapp.com/core/pokemon-troca/",
         contentType: 'application/json',
         data:JSON.stringify({ "pokemon_user" : listauser, "pokemon_troca": listatroca}),
-    });
-	location.reload();
+    }).done(function(){
+		alert('Parbéns pela troca, você obteve: ' +listatroca)
+		location.reload();
+	}).fail(function(){
+		alert('ops, parece que os servidores pokemon estão fora do ar, pedimos desculpas. Por favor tente novamente')
+		location.reload();
+	})
 }
 
 function zerar(){
