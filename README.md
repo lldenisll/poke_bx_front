@@ -13,7 +13,7 @@
     ·
     <a href="https://github.com/lldenisll/poke_trader_bx" targe="blank">Repositório Back-End</a>
   .
-    <a href="http://denisdev.com/poke_bx_front/index.html" targe="blank">Front End opção 02</a>
+    <a href="http://denisdev.com/poke_bx_front/index.html" targe="blank">Abrir Front End (opção 02)</a>
 
   
   </p>
