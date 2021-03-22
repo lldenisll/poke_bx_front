@@ -12,6 +12,7 @@
     <a href="https://calm-inlet-80092.herokuapp.com/core/" targe="blank">Abrir API Heroku</a>
     ·
     <a href="https://github.com/lldenisll/poke_trader_bx" targe="blank">Repositório Back-End</a>
+  .
     <a href="http://denisdev.com/poke_bx_front/index.html" targe="blank">Front End opção 02</a>
 
   
