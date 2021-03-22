@@ -36,7 +36,6 @@
     </li>
     <li><a href="#metodologia-utilizada">Metodologia Utilizada</a></li>
     <li><a href="#testes">Testes</a></li>
-
     <li><a href="#meu-contato">Contato</a></li>
   </ol>
 </details>
